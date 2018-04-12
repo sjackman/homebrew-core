@@ -12,6 +12,8 @@ class Gist < Formula
     sha256 "5d8c49b8c75cec0f4556c30b98e9af9f6f9a9cde0b208d38f6e410538c0763b7" => :el_capitan
   end
 
+  depends_on "ruby" unless OS.mac?
+
   def install
     system "rake", "install", "prefix=#{prefix}"
   end
